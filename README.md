@@ -1,2 +1,2 @@
 # SplitString
-Divides a string into almost equal sizes
+Divide a string into other strings, all with a given size ratio. If it is a segment of the string, it does not match the size, then proceed to cut the previous word in order to comply with the size provided.
