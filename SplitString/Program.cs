@@ -16,7 +16,16 @@ namespace SplitString
                 Console.WriteLine(str + " - " + str.Length);
             }
         }
-        
+
+        /// <summary>
+        /// Divide a string into other strings, all with a given size ratio. 
+        /// If it is a segment of the string, it does not match the size, then 
+        /// proceed to cut the previous word in order to comply with the size provided.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="size"></param>
+        /// <param name="adjust"></param>
+        /// <returns></returns>
         static string[] SplitString(string str, int size, bool adjust = false)
         {
             List<string> strResult = new List<string>();
