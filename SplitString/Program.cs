@@ -9,7 +9,7 @@ namespace SplitString
         {
             string strToSplit = "amelborp nu revloser arap esriuges ed nah euq senoiccurtsni ed adanedro y atinif augibma on aicneuces anu se omtirogla nu";
             
-            string[] result = SplitString(strToSplit, 20, true);
+            string[] result = SplitString(strToSplit, 20);
 
             foreach (string str in result)
             {
@@ -22,10 +22,14 @@ namespace SplitString
         /// If it is a segment of the string, it does not match the size, then 
         /// proceed to cut the previous word in order to comply with the size provided.
         /// </summary>
-        /// <param name="str"></param>
-        /// <param name="size"></param>
-        /// <param name="adjust"></param>
-        /// <returns></returns>
+        /// <param name="str">String to divide</param>
+        /// <param name="size">The maximum size of each cut</param>
+        /// <param name="adjust">Indicates whether you adjust the size of the cut</param>
+        /// <remarks>
+        /// If the parameter adjust is false and the parameter size is too small to make a cut then an 
+        /// exception type ArgumentOutOfRangeException will occur.
+        /// </remarks>
+        /// <returns>An array of strings</returns>
         static string[] SplitString(string str, int size, bool adjust = false)
         {
             List<string> strResult = new List<string>();
